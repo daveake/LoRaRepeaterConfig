@@ -302,7 +302,7 @@ var
 begin
     ComboBox1.Items.Clear;
 
-    reg := TRegistry.Create;
+    reg := TRegistry.Create(KEY_READ);
     try
         reg.RootKey := HKEY_LOCAL_MACHINE;
         reg.OpenKey('hardware\devicemap\serialcomm', False);

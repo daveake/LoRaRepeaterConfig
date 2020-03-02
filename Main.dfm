@@ -89,7 +89,6 @@ object frmMain: TfrmMain
     ItemHeight = 18
     ParentFont = False
     TabOrder = 2
-    ExplicitHeight = 597
   end
   object lstCommands: TListBox
     Left = 720
@@ -106,7 +105,6 @@ object frmMain: TfrmMain
     Width = 125
     Height = 27
     Style = csDropDownList
-    ItemHeight = 19
     TabOrder = 0
     OnCloseUp = ComboBox1CloseUp
   end
@@ -339,7 +337,6 @@ object frmMain: TfrmMain
       Width = 249
       Height = 27
       DropDownCount = 10
-      ItemHeight = 19
       ItemIndex = 0
       TabOrder = 3
       Text = 'Choose Mode ...'
@@ -361,7 +358,6 @@ object frmMain: TfrmMain
       Top = 141
       Width = 85
       Height = 27
-      ItemHeight = 19
       TabOrder = 4
       OnCloseUp = cmbRxCodingCloseUp
       Items.Strings = (
@@ -375,7 +371,6 @@ object frmMain: TfrmMain
       Top = 174
       Width = 85
       Height = 27
-      ItemHeight = 19
       TabOrder = 5
       OnCloseUp = cmbRxSpreadingCloseUp
       Items.Strings = (
@@ -392,7 +387,6 @@ object frmMain: TfrmMain
       Top = 174
       Width = 85
       Height = 27
-      ItemHeight = 19
       TabOrder = 6
       OnCloseUp = cmbRxBandwidthCloseUp
       Items.Strings = (
@@ -438,7 +432,6 @@ object frmMain: TfrmMain
       Width = 249
       Height = 27
       DropDownCount = 10
-      ItemHeight = 19
       ItemIndex = 0
       TabOrder = 10
       Text = 'Choose Mode ...'
@@ -460,7 +453,6 @@ object frmMain: TfrmMain
       Top = 265
       Width = 85
       Height = 27
-      ItemHeight = 19
       TabOrder = 11
       OnCloseUp = cmbTxCodingCloseUp
       Items.Strings = (
@@ -474,7 +466,6 @@ object frmMain: TfrmMain
       Top = 298
       Width = 85
       Height = 27
-      ItemHeight = 19
       TabOrder = 12
       OnCloseUp = cmbTxSpreadingCloseUp
       Items.Strings = (
@@ -491,7 +482,6 @@ object frmMain: TfrmMain
       Top = 298
       Width = 85
       Height = 27
-      ItemHeight = 19
       TabOrder = 13
       OnCloseUp = cmbTxBandwidthCloseUp
       Items.Strings = (
@@ -573,7 +563,7 @@ object frmMain: TfrmMain
     TabOrder = 10
   end
   object VaComm1: TVaComm
-    Baudrate = br57600
+    Baudrate = br115200
     FlowControl.OutCtsFlow = False
     FlowControl.OutDsrFlow = False
     FlowControl.ControlDtr = dtrEnabled
@@ -583,8 +573,10 @@ object frmMain: TfrmMain
     FlowControl.DsrSensitivity = False
     FlowControl.TxContinueOnXoff = False
     DeviceName = 'COM%d'
+    SettingsStore.RegRoot = rrCURRENTUSER
+    SettingsStore.Location = slINIFile
     OnRxChar = VaComm1RxChar
-    Version = '1.5.2.0'
+    Version = '2.0.4.0'
     Left = 148
     Top = 684
   end
